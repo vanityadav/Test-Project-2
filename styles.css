@@ -1,0 +1,315 @@
+@font-face {
+  font-family: Visby Round CF;
+  src: url(VisbyRoundCF-DemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Visby Round CF;
+  src: url(VisbyRoundCF-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Visby Round CF;
+  src: url(VisbyRoundCF-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Visby Round CF;
+  src: url(VisbyRoundCF-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: "Visby Round CF";
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(120, 120, 120, 0.1);
+  box-shadow: 0 2px 6px rgba(189, 189, 189, 0.1);
+  z-index: 99;
+}
+.headerItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerItems::before {
+  content: "";
+  margin-left: 66vw;
+}
+.btn-header {
+  cursor: pointer;
+  padding: 10px;
+  margin: 1.5vh 3vw 1.5vh 3vw;
+  font-size: clamp(1.2rem, 1.3vw, 3rem);
+  font-weight: 500;
+  padding: 1vh 1vw 1vh 1vw;
+}
+.btn-header:hover {
+  color: rgba(0, 136, 255, 0.508);
+  font-weight: 600;
+  background-color: rgba(149, 149, 149, 0.08);
+  border-radius: 2rem;
+}
+.promations {
+  margin-top: 10vh;
+}
+.contents {
+  position: relative;
+  height: 40vh;
+  overflow: hidden;
+}
+.images {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 12vw;
+  cursor: pointer;
+  opacity: 0.2;
+  transition: all 0.5s ease-in-out;
+}
+.btn-left-image {
+  left: 0;
+}
+.btn-right-image {
+  right: 0;
+  transform: rotate(180deg);
+}
+.arrow:hover {
+  opacity: 0.8;
+  background-color: grey;
+  box-shadow: 0 0 10px 10px gray;
+}
+.openModal:hover {
+  font-weight: 600;
+  box-shadow: 0 0 10px 5px rgba(0, 136, 255, 0.6);
+}
+.openModal {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 2vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: max(4vh, 3rem);
+  min-width: min(max(25vw, 200px), 250px);
+  max-width: min(12vw, 300px);
+  border: none;
+  font-size: clamp(1.2rem, 1.4vw, 3rem);
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+.diaglogContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.entry {
+  margin: 4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30vh;
+  font-size: clamp(1rem, 1vw, 3rem);
+}
+.label-dialog {
+  padding: 0 0 0 1vw;
+}
+.input-entry {
+  font-family: Visby Round CF;
+  background-color: rgba(150, 150, 150, 0.2);
+  padding: 1vh 0 1vh 1vw;
+  margin: 1vh 0 1vh 0;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  font-size: clamp(1rem, 1vw, 3rem);
+}
+.sumbit-register {
+  width: max(10vw, 100px);
+  margin: auto;
+  padding: 1vh;
+  font-size: clamp(1rem, 1vw, 3rem);
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0 0 10px rgba(162, 162, 162, 0.664);
+  transition: all 0.3s ease-in-out;
+}
+.sumbit-register:hover {
+  font-weight: 600;
+  box-shadow: 0 0 10px 6px rgba(0, 136, 255, 0.3);
+}
+
+.register-modal {
+  border: none;
+  background-color: rgb(232, 232, 232);
+  border-radius: 6vh;
+  box-shadow: 0 0 20px rgba(189, 189, 189, 0.344);
+}
+.register-modal::backdrop {
+  background-color: rgba(55, 57, 71, 0.7);
+}
+@media only screen and (max-width: 1200px) {
+  .headerItems::before {
+    margin-left: 60vw;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .headerItems::before {
+    margin-left: 50vw;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .headerItems::before {
+    margin-left: 0;
+  }
+}
+.schedule {
+  background: linear-gradient(#e5f9ff, #e1e1ff);
+  margin: 2vh 0 2vh 0;
+  border-radius: 2vh;
+  padding: 1vh 1vw 1vh 1vw;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+}
+.heading-sch {
+  white-space: nowrap;
+  text-align: center;
+  font-size: clamp(1.3rem, 2vw, 3rem);
+  font-weight: 700;
+  margin: 2vh 2vw 2vh 2vw;
+}
+.sch-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sch-btn:hover {
+  color: rgba(0, 136, 255, 0.508);
+  font-weight: 600;
+  background-color: rgb(255, 238, 217);
+  border-radius: 2rem;
+  box-shadow: 0 0 2rem rgb(171, 207, 255);
+}
+.sch-btn {
+  padding: 1vh 2vw 1vh 2vw;
+  margin: 1vh max(2vw, 1rem) 1vh max(2vw, 1rem);
+  background-color: rgb(254, 254, 254);
+  border-radius: 2rem;
+  font-size: clamp(0.8rem, 1vw, 3rem);
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 0 10px grey;
+  transition: all 0.3s ease-in-out;
+}
+.events {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+}
+@keyframes slidein {
+  from {
+    opacity: 0;
+    left: 100%;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+.event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2vh auto 2vh auto;
+  background-color: white;
+  border-radius: 5rem;
+  width: max(36vw, 300px);
+  padding: 1vh 2vw 1vh 2vw;
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+}
+.event-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.event-icon {
+  width: 6vh;
+  height: 6vh;
+  background-color: rgb(255, 153, 142);
+  border-radius: 50%;
+  margin-right: 2vw;
+  box-shadow: 0 0 10px grey;
+}
+.event-details {
+  display: flex;
+}
+div.event-details p {
+  font-size: clamp(0.8rem, 1vw, 3rem);
+  margin-right: max(1vw, 10px);
+}
+div.event-details p:hover {
+  color: rgba(0, 136, 255, 0.9);
+  cursor: pointer;
+  font-weight: 500;
+}
+.event-register {
+  width: max(6vw, 90px);
+  margin: auto;
+  padding: 1vh;
+  font-size: clamp(0.8rem, 1vw, 3rem);
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0 0 10px rgba(162, 162, 162, 0.664);
+  transition: all 0.3s ease-in-out;
+}
+.event-register:hover {
+  font-weight: 600;
+  box-shadow: 0 0 10px 6px rgba(0, 136, 255, 0.3);
+}
+footer {
+  height: 4vh 0 0 0;
+  background-color: rgba(126, 126, 126, 0.8);
+}
+.footer-elements {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+.footer-elements p {
+  margin-right: 2vh;
+  font-size: clamp(0.6rem, 1vw, 3rem);
+}

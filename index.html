@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Page</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="headerItems">
+        <div class="home btn-header">Home</div>
+        <div class="Register btn-header">Register</div>
+        <div class="live btn-header">Live</div>
+      </div>
+    </header>
+    <div class="promations">
+      <div class="contents">
+        <img class="btn-left-image arrow" src="arrow.svg" />
+        <img id="imgName" class="images" src="img1.jpg" />
+        <img class="btn-right-image arrow" src="arrow.svg" />
+        <button class="openModal">Register</button>
+      </div>
+      <dialog class="register-modal">
+        <div class="dialogContainer">
+          <div class="entry">
+            <label class="label-dialog" for="email"> E-mail </label>
+            <input
+              class="input-entry"
+              placeholder="Enter E-mail Id"
+              type="text"
+              name="email"
+              required
+            />
+          </div>
+          <div class="entry">
+            <label class="label-dialog" for="number"> Phone Number </label>
+            <input
+              class="input-entry"
+              placeholder="Enter Phone Number"
+              type="text"
+              name="number"
+              required
+            />
+          </div>
+          <div class="entry">
+            <button class="sumbit-register">Register</button>
+          </div>
+        </div>
+      </dialog>
+    </div>
+    <div class="schedule">
+      <div class="heading-sch">Conference Schedules</div>
+      <div class="sch-btns">
+        <div class="sch-btn">Day-1</div>
+        <div class="sch-btn">Day-2</div>
+        <div class="sch-btn">Day-3</div>
+        <div class="sch-btn">Day-4</div>
+      </div>
+      <div class="events">
+        <div class="event">
+          <div class="event-info">
+            <div class="event-icon"></div>
+            <div class="event-details">
+              <p class="event-time">10:00 AM</p>
+              <p class="event-title">Event Title</p>
+            </div>
+          </div>
+          <div>
+            <button class="event-register">Register</button>
+          </div>
+        </div>
+      
+        <div class="event">
+          <div class="event-info">
+            <div class="event-icon"></div>
+            <div class="event-details">
+              <p class="event-time">11:00 AM</p>
+              <p class="event-title">Event Title</p>
+            </div>
+          </div>
+          <div>
+            <button class="event-register">Register</button>
+          </div>
+      </div>
+        <div class="event">
+          <div class="event-info">
+            <div class="event-icon"></div>
+            <div class="event-details">
+              <p class="event-time">12:00 PM</p>
+              <p class="event-title">Event Title</p>
+            </div>
+          </div>
+          <div>
+            <button class="event-register">Register</button>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-info">
+            <div class="event-icon"></div>
+            <div class="event-details">
+              <p class="event-time">01:00 PM</p>
+              <p class="event-title">Event Title</p>
+            </div>
+          </div>
+          <div>
+            <button class="event-register">Register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <footer>
+      <div class="footer-elements">
+      <p>Company Info Here</p>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </footer>
+  </body>
+</html>
