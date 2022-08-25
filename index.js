@@ -32,8 +32,8 @@ function changeImage() {
         imgnewsrc = `../img${next}.jpg`
         img.src = imgnewsrc
     }
-     setTimeout(changeImage, 5000);
 }
+setInterval(changeImage, 500);
 
 function nextImage() {
     let newnext = next + 1
